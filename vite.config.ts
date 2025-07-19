@@ -4,7 +4,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/ecotrckr/' : '/', // <-- CRITICAL: Use /ecotrckr/
+  // Ensure this base path matches your GitHub repository name exactly
+  base: mode === 'production' ? '/ecotrckr/' : '/',
+
   server: {
     host: "::",
     port: 8080,
@@ -18,6 +20,6 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: 'build',
+    outDir: 'build', // Ensure this is 'build'
   },
 }));

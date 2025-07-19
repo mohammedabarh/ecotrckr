@@ -19,7 +19,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* ADD THE BASENAME PROP HERE */}
+      <BrowserRouter basename="/ecotrckr/"> {/* <-- THIS IS THE CRITICAL CHANGE */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
